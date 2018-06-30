@@ -1,0 +1,53 @@
+﻿@model List<dataEntities.IndexableEntity>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    string lastStyle = "bubble";
+    string floatStyle = "float:right; vertical-align:central;";
+}
+
+@if (Model != null && Model.Count() > 0)
+{
+    <div style="margin-top:30px;">
+        <div class="row">
+            <div class="form-group">
+                <div id="randomQuoteText" class="col-md-10">
+                    <h3>@Model[0].TitleName</h3>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="progress">
+            <div id="progressBar" class="progress-bar"><p id="progressTime"></p></div>
+        </div>
+        @foreach (dataEntities.IndexableEntity t in Model)
+        {
+            if (t.Id == Convert.ToInt32(ViewData["currentId"]))
+            {
+                lastStyle = "bubbleActive";
+            }
+
+            <a href="@Url.Action("details", "titles", new { id = t.Id, text = t.SubtitleText })" class="linkUndecorated">
+                <div class="row" style="width:700px;margin:10px;display:none;" data-id="quoteBubbleDiv">
+                    <p class="@lastStyle" style="@floatStyle">
+                        <span style="margin-left:10px; font-size:large; margin-top:5px; vertical-align:central;"> @t.SubtitleText</span>
+                    </p>
+                    @if (lastStyle == "bubble")
+                    {
+                        lastStyle = "bubbleRight";
+                        floatStyle = "float:left;";
+                    }
+                    else
+                    {
+                        lastStyle = "bubble";
+                        floatStyle = "float:right;";
+                    }
+
+                </div>
+            </a>
+        }
+    </div>
+}
+
+@Scripts.Render("~/appbundle/details")

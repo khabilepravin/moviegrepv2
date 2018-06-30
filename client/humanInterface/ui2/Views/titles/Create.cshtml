@@ -1,0 +1,68 @@
+﻿@model dataEntities.Title
+
+@{
+    ViewBag.Title = "SubmitTitle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+    //$(document).ready(function () {
+    //    applyTitleAutosuggest('#titleName');
+    //});
+</script>
+<h2>Post New Title</h2>
+<br/>
+@using (Html.BeginForm("SubmitTitle", "titles", FormMethod.Post, new { enctype = "multipart/form-data", id="postTitle" }))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">       
+        
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">            
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.TitleName, new { @class = "form-control", @placeholder = "Title Name" })
+                @Html.ValidationMessageFor(model => model.TitleName)
+            </div>
+        </div>
+
+        <div class="form-group">            
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Season, new { @class = "form-control", @placeholder = "Season" })
+                @Html.ValidationMessageFor(model => model.Season)
+            </div>
+        </div>
+
+        <div class="form-group">            
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Episode, new { @class = "form-control", @placeholder = "Episode" })
+                @Html.ValidationMessageFor(model => model.Episode)
+            </div>
+        </div>
+
+        <div class="form-group">            
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Year, new { @class = "form-control", @placeholder="Year" })
+                @Html.ValidationMessageFor(model => model.Year)
+            </div>
+        </div>
+
+        <div class="form-group">            
+            <div class="col-md-10">
+                <input type="file" id="SubtitleFile" name="SubtitleFile" placeholder="Select subtitle file (.srt)" />
+                @Html.ValidationMessageFor(model => model.SubtitleFile)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-10">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

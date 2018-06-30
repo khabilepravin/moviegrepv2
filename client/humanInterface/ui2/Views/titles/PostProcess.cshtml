@@ -1,0 +1,10 @@
+﻿@model int
+@{
+    ViewBag.Title = "post process";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 id="message">Successfully created the title, post process in progress</h2>
+<div id="progressIndicator" style="display:none;">Parsing the title...</div>
+<input type="hidden" id="titleIdForPostProcess" value="@Model"/>
+@Scripts.Render("~/appbundle/postprocess")

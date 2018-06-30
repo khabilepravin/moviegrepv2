@@ -1,0 +1,16 @@
+﻿@model dataEntities.IndexableEntity
+@if (Model != null)
+{
+    <div class="wrapper wrapper-content animated fadeInUp">
+        <ul class="notes">
+            <li>
+                <div>
+                    <small>@Model.StartTime</small>
+                    <h4>@Model.SubtitleText</h4>
+                    <p>@Model.TitleName</p>
+                    <a href="#"><i class="fa fa-thumbs-o-up"></i></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+}

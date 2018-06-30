@@ -1,0 +1,29 @@
+﻿@model IEnumerable<dataEntities.IndexableEntity>
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+        <a href="@Url.Action("details", "quotes", new { id = item.Id, quote = item.UrlFriendlyQuoteText })" class="linkUndecorated">
+            <blockquote>
+                <p>@Html.DisplayFor(modelItem => item.SubtitleText)</p>
+                <small><cite title="Source Title">@Html.DisplayFor(modelItem => item.TitleName)</cite></small>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div class="rateit" 
+                         data-id="@item.RatingId"
+                         data-rateit-value="@item.Rating" 
+                         data-rateit-preset="true"
+                         data-rateit-readonly="@item.RatingId == 0 ? false : true"></div>
+                }
+            </blockquote>
+        </a>
+    }
+}
+else
+{
+    <blockquote>
+        <p style="color:red;">What we have got here is failure to find what you are looking for.</p>
+    </blockquote>
+}
+
+

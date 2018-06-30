@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieGrep - The Ultimate Destination for Film Quotes and Dialogues</title>
+    <base href="@Url.Content("~")" id="baseURL" />
+    <link rel="shortcut icon" href="icons/favicon.ico">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/app")
+    @RenderSection("scripts", required: false)
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <header class="navbar-header">
+                @Html.ActionLink("MovieGrep", "Index", "titles", null, new { @class = "navbar-brand" })
+            </header>
+            <div class="navbar-collapse collapse" id="navbar-main">
+    <ul class="nav navbar-nav navbar-right">
+
+            <li>
+
+                @Html.ActionLink("Post Title", "create", "titles")
+            </li>
+
+        <li>
+            <a href="@Url.Action("analysis", "titles")">Analysis</a>
+        </li>
+        <li>
+            <a href="@Url.Action("explore", "titles")">Explore</a>
+        </li>
+        @*<li>
+            @if (User.Identity.IsAuthenticated)
+            {
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">@User.Identity.Name <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="@Url.Action("logoff", "account")">Signout</a></li>
+                </ul>
+            </li>
+            }
+            else
+            {
+                <a href="@Url.Action("login", "account")">Signin</a>
+            }
+            </li>*@
+        </ul>
+    </div>
+            </div>
+        </div>
+        <div class="container">
+            @RenderBody()
+            <hr />
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="list-inline">
+                            <li>@Html.ActionLink("about", "about", "site")</li>
+                            <li>@Html.ActionLink("contact", "contact", "site")</li>
+                            <li>@Html.ActionLink("api", "api", "site")</li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <div id="commonDialog" style="display:none;" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Error</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p id="commonDialogMessageContent"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>                        
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+    </body>
+</html>

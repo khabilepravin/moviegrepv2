@@ -1,0 +1,76 @@
+﻿@model List<dataEntities.IndexableEntity>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.row').each(function (i, elem) {
+            $(this).fadeIn("slow").delay(1000 * 3);
+        });
+
+        GetTitlePercent();
+    });
+
+    function GetTitlePercent() {
+        var startTime = '@Model[0].StartTime';
+        var getPercentageUrl = '@Url.Action("GetTitlePercent", "Quotes", new { id = Model[0].TitleId, currentTime=Model[0].StartTime.TotalSeconds })';
+        $.ajax({
+            type: "GET",
+            url: getPercentageUrl
+        }).done(function (data) {
+            if (data != undefined && data != '') {
+                data += '%';
+                $('#progressBar').css('width', data);
+                $('#progressTime').html(startTime);
+            }
+        });
+    }
+</script>
+
+@{
+    string lastStyle = "bubble";
+    string floatStyle = "float:right; vertical-align:central;";
+}
+
+@if (Model != null && Model.Count() > 0)
+{
+    <div style="margin-top:30px;">
+        <div class="row">
+            <div class="form-group">
+                <div id="randomQuoteText" class="col-md-10">
+                    <h3>@Model[0].TitleName</h3>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="progress">
+            <div id="progressBar" class="progress-bar"><p id="progressTime"></p></div>
+        </div>
+        @foreach (dataEntities.IndexableEntity t in Model)
+        {
+            if (t.Id == Convert.ToInt32(ViewData["currentId"]))
+            {
+                lastStyle = "bubbleActive";
+            }
+
+            <a href="@Url.Action("details", "quotes", new { id = t.Id, quote = t.UrlFriendlyQuoteText })" class="linkUndecorated">
+                <div class="row" style="width:700px;margin:10px;display:none;" data-id="quoteBubbleDiv">
+                    <p class="@lastStyle" style="@floatStyle">
+                        <span style="margin-left:10px; font-size:large; margin-top:5px; vertical-align:central;"> @t.SubtitleText</span>
+                    </p>
+                    @if (lastStyle == "bubble")
+                    {
+                        lastStyle = "bubbleRight";
+                        floatStyle = "float:left;";
+                    }
+                    else
+                    {
+                        lastStyle = "bubble";
+                        floatStyle = "float:right;";
+                    }
+
+                </div>
+            </a>
+        }
+    </div>
+}

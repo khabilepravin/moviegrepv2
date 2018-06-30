@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "MovieGrep";
+}
+<div>
+    <div class="row">
+        <div class="form-group">
+            <div id="randomQuoteText" class="col-sm-12 col-lg-10">
+            </div>                        
+            <div class="col-sm-12 col-lg-2" align="center">
+                <button id="nextRandomQuote" class="btn btn-success " type="button"><i class="fa fa-step-forward"></i>&nbsp;&nbsp;<span class="bold">Next</span></button>
+            </div>
+        </div>
+    </div>
+    <div class="row">        
+            <div class="col-sm-12 col-lg-5" align="center">                
+                <input type="text" id="search" 
+                       class="form-control" 
+                       placeholder="Part of quote or conversation" />
+            </div>
+            <div class="col-sm-12 col-lg-4" align="center">
+                <input type="text" id="titleName"
+                       class="form-control"
+                       placeholder="Title name" />
+            </div>
+            <div class="col-sm-12 col-lg-3" align="center">
+                <button id="searchButton" class="btn btn-primary" type="button"><i class="fa fa-search"></i>&nbsp;&nbsp;<span class="bold">Search</span></button>
+            </div>        
+    </div>
+    @*<div class="row" id="searchInProgress" style="display:none;">
+        <div class="form-group">
+            <div class="col-sm-12" align="center">
+                <div class="control-label">Searching...</div>
+            </div>
+        </div>
+    </div>*@
+    <div class="spiner-example" id="searchInProgress" style="display:none;">
+        <div class="sk-spinner sk-spinner-chasing-dots">
+            <div class="sk-dot1"></div>
+            <div class="sk-dot2"></div>
+        </div>
+    </div>
+    <div id="searchResult" class="row">
+    </div>
+</div>
+@Scripts.Render("~/appbundle/main")

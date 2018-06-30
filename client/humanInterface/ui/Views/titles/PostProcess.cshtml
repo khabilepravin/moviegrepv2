@@ -1,0 +1,47 @@
+﻿@model int
+@{
+    ViewBag.Title = "post process";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 id="message">Successfully created the title, post process in progress</h2>
+<div id="progressIndicator" style="display:none;">Parsing the title...</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var titleId = '@Model';
+        parseTitle(titleId);
+    });
+
+    function parseTitle(titleId)
+    {
+        $('#progressIndicator').css('display', 'block');
+        var parseTitleUrl = '@Url.Action("ParseTitle", "Titles")';
+        var params = { "titleId": titleId };
+        
+        $.ajax({
+            type: "GET",
+            url: parseTitleUrl,
+            data: params
+        }).done(function () {
+            $('#progressIndicator').css('display', 'none');
+            indexTitle(titleId);
+        });
+    }
+
+    function indexTitle(titleId)
+    {
+        $('#progressIndicator').html('Indexing...')
+        $('#progressIndicator').css('display', 'block');
+        var indexTitleUrl = '@Url.Action("IndexTitle", "Titles")';
+        var params = { "titleId": titleId };
+
+        $.ajax({
+            type: "GET",
+            url: indexTitleUrl,
+            data: params
+        }).done(function () {
+            $('#progressIndicator').css('display', 'none');
+            $('#message').html('Done');
+        });
+    }
+</script>

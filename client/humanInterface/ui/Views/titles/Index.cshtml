@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "MovieGrep";
+}
+<div>
+    <div class="row">
+        <div class="form-group">
+            <div id="randomQuoteText" class="col-sm-12 col-lg-10">
+            </div>                        
+            <div class="col-sm-12 col-lg-2" align="center">
+                <button id="nextRandomQuote" type="button" class="btn btn-primary">Next</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">        
+            <div class="col-sm-12 col-lg-5" align="center">                
+                <input type="text" id="search" 
+                       class="form-control" 
+                       placeholder="Part of quote or conversation" />
+            </div>
+            <div class="col-sm-12 col-lg-4" align="center">
+                <input type="text" id="titleName"
+                       class="form-control"
+                       placeholder="Title name" />
+            </div>
+            <div class="col-sm-12 col-lg-3" align="center">
+                <button id="searchButton" type="button" class="btn btn-primary">Search</button>
+            </div>        
+    </div>
+    <div class="row" id="searchInProgress" style="display:none;">
+        <div class="form-group">
+            <div class="col-sm-12" align="center">
+                <div class="control-label">Searching...</div>
+            </div>
+        </div>
+    </div>
+    <div id="searchResult" class="row">
+    </div>
+</div>
+@Scripts.Render("~/bundles/index")

@@ -187,3 +187,5 @@ FakesAssemblies/
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
+/server/serverStuff/.vs/serverStuff/v15/Server/sqlite3
+/client/humanInterface/.vs/humanInterface/v15/Server/sqlite3

@@ -1,0 +1,11 @@
+﻿@model dataEntities.IndexableEntity
+
+@if (Model != null)
+{
+    <a href="@Url.Action("details", "quotes", new { id = Model.Id, quote = Model.UrlFriendlyQuoteText })" class="linkUndecorated">
+    <blockquote data-id="@Model.Id">
+    <p><h3>&quot; @Model.SubtitleText &quot;</h3></p>
+    <small><cite title="Source Title">@Model.TitleName</cite></small>
+    </blockquote>
+    </a>   
+}

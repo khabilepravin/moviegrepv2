@@ -1,38 +1,131 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "humanInterface", "humanInterface\humanInterface.csproj", "{41C6B450-56ED-4F08-8BC7-3470785C65C2}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4629A600-815B-4FD2-80F4-AD6A009AB096}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "humanInterface.Tests", "humanInterface.Tests\humanInterface.Tests.csproj", "{50FE813E-5EA1-4362-91D1-97CC6ABE5301}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dataAccess", "dataAccess\dataAccess.csproj", "{B3672E16-589B-4DC2-9CD6-27B018679F9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dataEntities", "dataEntities\dataEntities.csproj", "{263C1381-2E44-43C7-B144-3865A8FA822D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indexing", "indexing\indexing.csproj", "{9F16A8C2-0E39-49C9-BB59-85CB91F64B94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ui", "ui\ui.csproj", "{42144C0C-1CE8-47C6-9305-67BBE0BD57AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "theParser", "theParser\theParser.csproj", "{C64127BA-A583-402F-B4DF-83049E1AFD5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "businessLogic", "businessLogic\businessLogic.csproj", "{571500A5-6E73-4656-9951-449DA4A638AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api", "api\api.csproj", "{267FBDE0-3E7B-4CEA-8168-CFA2572CF452}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Database", "Database\Database.sqlproj", "{D7E65FC5-97CC-4A77-AB3E-E452A0616B46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ui2", "ui2\ui2.csproj", "{86CADB26-5817-46B6-88C7-76D5753722C3}"
+EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 3
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://khabilepravin.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = humanInterface.Tests\\humanInterface.Tests.csproj
-		SccProjectName1 = humanInterface.Tests
-		SccLocalPath1 = humanInterface.Tests
-		SccProjectUniqueName2 = humanInterface\\humanInterface.csproj
-		SccProjectName2 = humanInterface
-		SccLocalPath2 = humanInterface
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{41C6B450-56ED-4F08-8BC7-3470785C65C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{41C6B450-56ED-4F08-8BC7-3470785C65C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{41C6B450-56ED-4F08-8BC7-3470785C65C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{41C6B450-56ED-4F08-8BC7-3470785C65C2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{50FE813E-5EA1-4362-91D1-97CC6ABE5301}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{50FE813E-5EA1-4362-91D1-97CC6ABE5301}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50FE813E-5EA1-4362-91D1-97CC6ABE5301}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50FE813E-5EA1-4362-91D1-97CC6ABE5301}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3672E16-589B-4DC2-9CD6-27B018679F9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3672E16-589B-4DC2-9CD6-27B018679F9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3672E16-589B-4DC2-9CD6-27B018679F9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3672E16-589B-4DC2-9CD6-27B018679F9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{263C1381-2E44-43C7-B144-3865A8FA822D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{263C1381-2E44-43C7-B144-3865A8FA822D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{263C1381-2E44-43C7-B144-3865A8FA822D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{263C1381-2E44-43C7-B144-3865A8FA822D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F16A8C2-0E39-49C9-BB59-85CB91F64B94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F16A8C2-0E39-49C9-BB59-85CB91F64B94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F16A8C2-0E39-49C9-BB59-85CB91F64B94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F16A8C2-0E39-49C9-BB59-85CB91F64B94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42144C0C-1CE8-47C6-9305-67BBE0BD57AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42144C0C-1CE8-47C6-9305-67BBE0BD57AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42144C0C-1CE8-47C6-9305-67BBE0BD57AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42144C0C-1CE8-47C6-9305-67BBE0BD57AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C64127BA-A583-402F-B4DF-83049E1AFD5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C64127BA-A583-402F-B4DF-83049E1AFD5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C64127BA-A583-402F-B4DF-83049E1AFD5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C64127BA-A583-402F-B4DF-83049E1AFD5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{571500A5-6E73-4656-9951-449DA4A638AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{571500A5-6E73-4656-9951-449DA4A638AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{571500A5-6E73-4656-9951-449DA4A638AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{571500A5-6E73-4656-9951-449DA4A638AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{267FBDE0-3E7B-4CEA-8168-CFA2572CF452}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{267FBDE0-3E7B-4CEA-8168-CFA2572CF452}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{267FBDE0-3E7B-4CEA-8168-CFA2572CF452}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{267FBDE0-3E7B-4CEA-8168-CFA2572CF452}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7E65FC5-97CC-4A77-AB3E-E452A0616B46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7E65FC5-97CC-4A77-AB3E-E452A0616B46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86CADB26-5817-46B6-88C7-76D5753722C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86CADB26-5817-46B6-88C7-76D5753722C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86CADB26-5817-46B6-88C7-76D5753722C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86CADB26-5817-46B6-88C7-76D5753722C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://khabilepravin.visualstudio.com/defaultcollection
+		SccProjectUniqueName0 = humanInterface.Tests\\humanInterface.Tests.csproj
+		SccProjectName0 = humanInterface.Tests
+		SccAuxPath0 = https://khabilepravin.visualstudio.com/DefaultCollection
+		SccLocalPath0 = humanInterface.Tests
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = dataAccess\\dataAccess.csproj
+		SccProjectName1 = dataAccess
+		SccAuxPath1 = https://khabilepravin.visualstudio.com/DefaultCollection
+		SccLocalPath1 = dataAccess
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName2 = dataEntities\\dataEntities.csproj
+		SccProjectName2 = dataEntities
+		SccAuxPath2 = https://khabilepravin.visualstudio.com/DefaultCollection
+		SccLocalPath2 = dataEntities
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName3 = indexing\\indexing.csproj
+		SccProjectName3 = indexing
+		SccAuxPath3 = https://khabilepravin.visualstudio.com/DefaultCollection
+		SccLocalPath3 = indexing
+		SccProvider3 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName4 = ui\\ui.csproj
+		SccProjectName4 = ui
+		SccAuxPath4 = https://khabilepravin.visualstudio.com/DefaultCollection
+		SccLocalPath4 = ui
+		SccProvider4 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName5 = theParser\\theParser.csproj
+		SccProjectName5 = theParser
+		SccAuxPath5 = https://khabilepravin.visualstudio.com/DefaultCollection
+		SccLocalPath5 = theParser
+		SccProvider5 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName6 = businessLogic\\businessLogic.csproj
+		SccProjectName6 = businessLogic
+		SccAuxPath6 = https://khabilepravin.visualstudio.com/DefaultCollection
+		SccLocalPath6 = businessLogic
+		SccProvider6 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName7 = api\\api.csproj
+		SccProjectName7 = api
+		SccAuxPath7 = https://khabilepravin.visualstudio.com/DefaultCollection
+		SccLocalPath7 = api
+		SccProvider7 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName8 = ui2\\ui2.csproj
+		SccProjectName8 = ui2
+		SccAuxPath8 = https://khabilepravin.visualstudio.com/defaultcollection
+		SccLocalPath8 = ui2
+		SccProvider8 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 	EndGlobalSection
 EndGlobal

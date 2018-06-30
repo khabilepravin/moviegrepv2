@@ -1,0 +1,58 @@
+{
+  "version": 2,
+  "exports": {
+    "businessLogic/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.5",
+      "compile": {
+        "bin/Debug/businessLogic.dll": {}
+      },
+      "runtime": {
+        "bin/Debug/businessLogic.dll": {}
+      }
+    },
+    "dataEntities/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.5",
+      "compile": {
+        "bin/Debug/dataEntities.dll": {}
+      },
+      "runtime": {
+        "bin/Debug/dataEntities.dll": {}
+      }
+    },
+    "dataAccess/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.5",
+      "compile": {
+        "bin/Debug/dataAccess.dll": {}
+      },
+      "runtime": {
+        "../binaries/retriever.dll": {},
+        "bin/Debug/dataAccess.dll": {}
+      }
+    },
+    "indexing/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.5",
+      "compile": {
+        "bin/Debug/indexing.dll": {}
+      },
+      "runtime": {
+        "../packages/Lucene.Net.3.0.3/lib/NET40/Lucene.Net.dll": {},
+        "../packages/SharpZipLib.0.86.0/lib/20/ICSharpCode.SharpZipLib.dll": {},
+        "bin/Debug/indexing.dll": {}
+      }
+    },
+    "theParser/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.5",
+      "compile": {
+        "bin/Debug/theParser.dll": {}
+      },
+      "runtime": {
+        "bin/Debug/theParser.dll": {}
+      }
+    }
+  }
+}
