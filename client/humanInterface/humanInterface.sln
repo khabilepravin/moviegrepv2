@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "humanInterface", "humanInterface\humanInterface.csproj", "{41C6B450-56ED-4F08-8BC7-3470785C65C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "humanInterface.Tests", "humanInterface.Tests\humanInterface.Tests.csproj", "{50FE813E-5EA1-4362-91D1-97CC6ABE5301}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://khabilepravin.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = humanInterface.Tests\\humanInterface.Tests.csproj
+		SccProjectName1 = humanInterface.Tests
+		SccLocalPath1 = humanInterface.Tests
+		SccProjectUniqueName2 = humanInterface\\humanInterface.csproj
+		SccProjectName2 = humanInterface
+		SccLocalPath2 = humanInterface
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41C6B450-56ED-4F08-8BC7-3470785C65C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41C6B450-56ED-4F08-8BC7-3470785C65C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41C6B450-56ED-4F08-8BC7-3470785C65C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41C6B450-56ED-4F08-8BC7-3470785C65C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50FE813E-5EA1-4362-91D1-97CC6ABE5301}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50FE813E-5EA1-4362-91D1-97CC6ABE5301}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50FE813E-5EA1-4362-91D1-97CC6ABE5301}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50FE813E-5EA1-4362-91D1-97CC6ABE5301}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
